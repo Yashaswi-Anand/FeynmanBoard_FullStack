@@ -22,7 +22,7 @@ function Dashboard() {
     <div className='container mt-5'>
 
       <div className='row'>
-        <div className='col-3'><h3 className='text-secondary'><i class="fa-solid fa-user"></i>&nbsp;{localStorage.getItem('username')}</h3></div>
+        <div className='col-3'><h3 className='text-secondary'><i class="fa-solid fa-user"></i>&nbsp;{localStorage.getItem('username') != undefined ?localStorage.getItem('username'): "Hey!!!"}</h3></div>
         <div className='col-6'></div>
         <div className='col-3'><Link to='/addTopic'><h4 className='removeUnderline'><i class="fa-solid fa-plus"></i>ADD TOPIC</h4></Link></div>
       </div>
