@@ -3,7 +3,7 @@ const port = 8000
 const bodyParser = require('body-parser')
 const app = express()
 const db = require('./config/mongoose')
-// const feynmanrRoutes = require('./routes/feynmanRoutes') 
+const feynmanrRoutes = require('./routes/feynmanRoutes') 
 var cors = require('cors');
 
 // cors (secure cross-origin requests)
@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 // routes 
-// app.use('/', feynmanrRoutes)
+app.use('/', feynmanrRoutes)
 
 // app.get('/', (req,res) =>{
 //     console.log('running');
